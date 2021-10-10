@@ -1,0 +1,96 @@
+См. флаги “-mkdir” и “-touchz“
+    1. 
+        Команда: hdfs dfs -mkdir /hw_egorov
+    2.
+        Команда: hdfs dfs -mkdir /hw_egorov/hw_egorov_sub
+    3.
+        Ответ: При удалении файла из распределенной файловой системы, они сначала попадают в папку Trash (для каждого пользователя может быть своя) 
+        и только спустя определенное время удаляются из системы физически. Но конечно, можно пропустить этап с Trash-ом, если при удалении файла 
+        воспользовать флагом -skipTrash. hdfs dfs -rm -skipTrash some_file
+    4.
+        Команда: hdfs dfs -touchz /hw_egorov/hw_egorov_sub/file
+    5.
+        Команда: hdfs dfs -rm /hw_egorov/hw_egorov_sub/file
+    6.
+        Команда: hdfs dfs -rm -r /hw_egorov
+
+См. флаги “-put”, “-cat”, “-tail”, “-cp”
+    1. 
+        Команда: hdfs dfs -mkdir /hw_egorov && hdfs dfs -put /test.txt /hw_egorov/
+    2.
+        Команда: hdfs dfs -cat /hw_egorov/test.txt
+    3.
+        Команда: hdfs dfs -cat /hw_egorov/test.txt | tail -5
+    4.
+        Команда: hdfs dfs -cat /hw_egorov/test.txt | head -5
+    5.
+        Команда: hdfs dfs -mkdir /hw_egorov1 && hdfs dfs -cp /hw_egorov/test.txt /hw_egorov1  # копирование через клиента
+
+Задачи:
+2. 
+    Команда: time hdfs dfs -setrep -w 1 /hw_egorov/test.txt  # понижение фактора репликации до 1 заняло: real	0m11.299s user	0m1.750s sys	0m0.138s
+             time hdfs dfs -setrep -w 3 /hw_egorov/test.txt  # повышение фактора репликации до 3 заняло: real	0m11.306s user	0m1.810s sys	0m0.105s
+3.
+    Команда: hdfs fsck /hw_egorov/test.txt -files -blocks -locations
+    Результат: 
+        Connecting to namenode via http://namenode:9870/fsck?ugi=root&files=1&blocks=1&locations=1&path=%2Fhw_egorov%2Ftest.txt
+        FSCK started by root (auth:SIMPLE) from /172.21.0.5 for path /hw_egorov/test.txt at Sun Oct 10 11:19:08 UTC 2021
+        /hw_egorov/test.txt 45 bytes, replicated: replication=3, 1 block(s):  OK
+        0. BP-1825452776-172.21.0.5-1633863235691:blk_1073741832_1008 len=45 Live_repl=3  [DatanodeInfoWithStorage[172.21.0.6:9866,DS-ae9934a3-95c0-4a12-89bd-e4afe9fd4d2c,DISK], DatanodeInfoWithStorage[172.21.0.7:9866,DS-04872baf-fae2-4f0c-a194-565d046eea24,DISK], DatanodeInfoWithStorage[172.21.0.4:9866,DS-9f7190a3-3447-47ac-aa56-83fe8d0d0833,DISK]]
+
+
+        Status: HEALTHY
+        Number of data-nodes:	3
+        Number of racks:		1
+        Total dirs:			0
+        Total symlinks:		0
+
+        Replicated Blocks:
+        Total size:	45 B
+        Total files:	1
+        Total blocks (validated):	1 (avg. block size 45 B)
+        Minimally replicated blocks:	1 (100.0 %)
+        Over-replicated blocks:	0 (0.0 %)
+        Under-replicated blocks:	0 (0.0 %)
+        Mis-replicated blocks:		0 (0.0 %)
+        Default replication factor:	3
+        Average block replication:	3.0
+        Missing blocks:		0
+        Corrupt blocks:		0
+        Missing replicas:		0 (0.0 %)
+
+        Erasure Coded Block Groups:
+        Total size:	0 B
+        Total files:	0
+        Total block groups (validated):	0
+        Minimally erasure-coded block groups:	0
+        Over-erasure-coded block groups:	0
+        Under-erasure-coded block groups:	0
+        Unsatisfactory placement block groups:	0
+        Average block group size:	0.0
+        Missing block groups:		0
+        Corrupt block groups:		0
+        Missing internal blocks:	0
+        FSCK ended at Sun Oct 10 11:19:08 UTC 2021 in 4 milliseconds
+
+
+        The filesystem under path '/hw_egorov/test.txt' is HEALTHY
+
+4.
+    Команда: hdfs fsck -blockId blk_1073741832
+    Результат: 
+        Connecting to namenode via http://namenode:9870/fsck?ugi=root&blockId=blk_1073741832+&path=%2F
+        FSCK started by root (auth:SIMPLE) from /172.21.0.5 at Sun Oct 10 11:22:26 UTC 2021
+
+        Block Id: blk_1073741832
+        Block belongs to: /hw_egorov/test.txt
+        No. of Expected Replica: 3
+        No. of live Replica: 3
+        No. of excess Replica: 0
+        No. of stale Replica: 0
+        No. of decommissioned Replica: 0
+        No. of decommissioning Replica: 0
+        No. of corrupted Replica: 0
+        Block replica on datanode/rack: 07c06fee5ad5/default-rack is HEALTHY
+        Block replica on datanode/rack: 7a9e9a4f4eb2/default-rack is HEALTHY
+        Block replica on datanode/rack: 607979f275e8/default-rack is HEALTHY

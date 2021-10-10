@@ -1,0 +1,102 @@
+Local:
+    Command:
+        cat ../AB_NYC_2019.csv | python3 mapper.py | sort -k1,1 | python3 reducer.py
+    Result:
+        152.7206871868289
+
+Cluster:
+    Command:
+        bash run.sh 
+    Result:
+        Deleted egorov_res
+        packageJobJar: [] [/opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar] /tmp/streamjob4597594865846602221.jar tmpDir=null
+        2021-10-10 13:00:33,264 INFO client.RMProxy: Connecting to ResourceManager at resourcemanager/172.23.0.7:8032
+        2021-10-10 13:00:33,369 INFO client.AHSProxy: Connecting to Application History server at historyserver/172.23.0.4:10200
+        2021-10-10 13:00:33,387 INFO client.RMProxy: Connecting to ResourceManager at resourcemanager/172.23.0.7:8032
+        2021-10-10 13:00:33,388 INFO client.AHSProxy: Connecting to Application History server at historyserver/172.23.0.4:10200
+        2021-10-10 13:00:33,502 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1633868499802_0005
+        2021-10-10 13:00:33,584 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        2021-10-10 13:00:33,671 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        2021-10-10 13:00:33,732 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        2021-10-10 13:00:33,824 INFO mapred.FileInputFormat: Total input files to process : 1
+        2021-10-10 13:00:33,854 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        2021-10-10 13:00:33,885 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        2021-10-10 13:00:33,900 INFO mapreduce.JobSubmitter: number of splits:2
+        2021-10-10 13:00:33,976 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        2021-10-10 13:00:33,987 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1633868499802_0005
+        2021-10-10 13:00:33,987 INFO mapreduce.JobSubmitter: Executing with tokens: []
+        2021-10-10 13:00:34,095 INFO conf.Configuration: resource-types.xml not found
+        2021-10-10 13:00:34,095 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+        2021-10-10 13:00:34,340 INFO impl.YarnClientImpl: Submitted application application_1633868499802_0005
+        2021-10-10 13:00:34,364 INFO mapreduce.Job: The url to track the job: http://resourcemanager:8088/proxy/application_1633868499802_0005/
+        2021-10-10 13:00:34,365 INFO mapreduce.Job: Running job: job_1633868499802_0005
+        2021-10-10 13:00:38,452 INFO mapreduce.Job: Job job_1633868499802_0005 running in uber mode : false
+        2021-10-10 13:00:38,453 INFO mapreduce.Job:  map 0% reduce 0%
+        2021-10-10 13:00:41,490 INFO mapreduce.Job:  map 50% reduce 0%
+        2021-10-10 13:00:42,501 INFO mapreduce.Job:  map 100% reduce 0%
+        2021-10-10 13:00:45,519 INFO mapreduce.Job:  map 100% reduce 100%
+        2021-10-10 13:00:45,534 INFO mapreduce.Job: Job job_1633868499802_0005 completed successfully
+        2021-10-10 13:00:45,583 INFO mapreduce.Job: Counters: 54
+            File System Counters
+                FILE: Number of bytes read=72
+                FILE: Number of bytes written=698680
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=7082259
+                HDFS: Number of bytes written=20
+                HDFS: Number of read operations=11
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+            Job Counters 
+                Launched map tasks=2
+                Launched reduce tasks=1
+                Rack-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=12252
+                Total time spent by all reduces in occupied slots (ms)=11608
+                Total time spent by all map tasks (ms)=3063
+                Total time spent by all reduce tasks (ms)=1451
+                Total vcore-milliseconds taken by all map tasks=3063
+                Total vcore-milliseconds taken by all reduce tasks=1451
+                Total megabyte-milliseconds taken by all map tasks=12546048
+                Total megabyte-milliseconds taken by all reduce tasks=11886592
+            Map-Reduce Framework
+                Map input records=49081
+                Map output records=2
+                Map output bytes=54
+                Map output materialized bytes=86
+                Input split bytes=190
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=1
+                Reduce shuffle bytes=86
+                Reduce input records=2
+                Reduce output records=1
+                Spilled Records=4
+                Shuffled Maps =2
+                Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=75
+                CPU time spent (ms)=1490
+                Physical memory (bytes) snapshot=795074560
+                Virtual memory (bytes) snapshot=18696867840
+                Total committed heap usage (bytes)=832045056
+                Peak Map Physical memory (bytes)=299147264
+                Peak Map Virtual memory (bytes)=5116678144
+                Peak Reduce Physical memory (bytes)=198078464
+                Peak Reduce Virtual memory (bytes)=8464654336
+            Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+            File Input Format Counters 
+                Bytes Read=7082069
+            File Output Format Counters 
+                Bytes Written=20
+        2021-10-10 13:00:45,583 INFO streaming.StreamJob: Output directory: ./egorov_res
+        2021-10-10 13:00:46,760 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+        152.72068718682894

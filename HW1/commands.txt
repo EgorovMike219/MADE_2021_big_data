@@ -1,0 +1,9 @@
+sudo docker-compose down
+sudo docker volume rm $(sudo docker volume ls -q)
+sudo docker-compose up
+
+sudo docker exec -it namenode /bin/bash
+
+hdfs dfsadmin -safemode leave
+
+sudo docker cp test.txt namenode:/
