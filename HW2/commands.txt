@@ -1,0 +1,3 @@
+docker cp artists.csv docker-hadoop-hive-parquet_hive-server_1:/opt/
+docker-compose exec hive-server bash
+hdfs dfs -put artists.csv /user/

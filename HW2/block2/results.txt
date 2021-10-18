@@ -1,0 +1,45 @@
+Результаты для запросов:
+    a) Исполнителя с максимальным числом скробблов
+    artist_lastfm	scrobbles_lastfm
+    The Beatles	517126254
+
+    b) Самый популярный тэг на ластфм
+    tag	sum_scrobbles
+    seen live	89647094995
+
+    c) Самые популярные исполнители 10 самых популярных тегов ластфм
+    tag	tag_scrobbles	artist	artist_scrobbles
+    seen live	89647094995	Radiohead	499548797
+    rock	77475365391	The Beatles	517126254
+    alternative	69542152071	Radiohead	499548797
+    indie	57430774544	Radiohead	499548797
+    pop	56681807433	The Beatles	517126254
+    electronic	48286852650	Radiohead	499548797
+    alternative rock	43320934234	Radiohead	499548797
+    american	42347562451	Linkin Park	294986508
+    male vocalists	40567238247	Radiohead	499548797
+    00s	39585589754	Radiohead	499548797
+
+
+    d) 20 стран с самым большим количеством исполнителей, у которых больше 1 000 000 скробблов.
+    country	n_artist
+    United States	5137
+    United Kingdom	1931
+    	1179
+    Germany	755
+    Japan	619
+    Sweden	467
+    Canada	408
+    France	381
+    Australia	298
+    Poland	280
+    Finland	244
+    Brazil	242
+    Italy	229
+    Netherlands	206
+    Russia	202
+    Norway	186
+    Spain	180
+    South Korea	124
+    Belgium	105
+    Denmark	100
