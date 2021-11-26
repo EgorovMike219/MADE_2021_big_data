@@ -1,0 +1,1467 @@
+﻿{
+  "paragraphs": [
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946657196_2011543120",
+      "id": "paragraph_1637946657196_2011543120",
+      "dateCreated": "2021-11-26T17:10:57+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:8571",
+      "text": "spark",
+      "dateUpdated": "2021-11-26T17:11:26+0000",
+      "dateFinished": "2021-11-26T17:11:26+0000",
+      "dateStarted": "2021-11-26T17:11:26+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.SparkSession\u001b[0m = org.apache.spark.sql.SparkSession@79e7eb9b\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "\nimport org.apache.spark.rdd.RDD\nimport org.apache.spark.sql._\nimport org.apache.spark.sql.functions._\nimport org.apache.spark.storage.StorageLevel",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:11:36+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.rdd.RDD\nimport org.apache.spark.sql._\nimport org.apache.spark.sql.functions._\nimport org.apache.spark.storage.StorageLevel\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472749_468393520",
+      "id": "20211126-170752_691455417",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "dateStarted": "2021-11-26T17:11:36+0000",
+      "dateFinished": "2021-11-26T17:11:36+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5998"
+    },
+    {
+      "text": "%md\n## SparkSession\nКонфигурация spark https://spark.apache.org/docs/latest/configuration.html",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:14:28+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>SparkSession</h2>\n<p>Конфигурация spark <a href=\"https://spark.apache.org/docs/latest/configuration.html\">https://spark.apache.org/docs/latest/configuration.html</a></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472749_1999098547",
+      "id": "20211126-170752_473808784",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:5999",
+      "dateFinished": "2021-11-26T17:14:28+0000",
+      "dateStarted": "2021-11-26T17:14:28+0000"
+    },
+    {
+      "text": "val spark = SparkSession.builder()\n    // адрес мастера\n    .master(\"local[*]\")\n    // имя приложения в интерфейсе спарка\n    .appName(\"made-demo\")\n//     .config(\"spark.executor.memory\",  \"2g\")\n//     .config(\"spark.executor.cores\", \"2\")\n//     .config(\"spark.driver.memory\", \"2g\")\n    .getOrCreate()",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:13:47+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mspark\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.SparkSession\u001b[0m = org.apache.spark.sql.SparkSession@79e7eb9b\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472749_23509366",
+      "id": "20211126-170752_472535437",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6000",
+      "dateFinished": "2021-11-26T17:13:47+0000",
+      "dateStarted": "2021-11-26T17:13:47+0000"
+    },
+    {
+      "text": "%md\nИмпортируем синтаксический сахар.",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:14:47+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Импортируем синтаксический сахар.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_328543400",
+      "id": "20211126-170752_520710601",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6001",
+      "dateFinished": "2021-11-26T17:14:47+0000",
+      "dateStarted": "2021-11-26T17:14:47+0000"
+    },
+    {
+      "text": "import spark.implicits._",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:15:03+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import spark.implicits._\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_1828071767",
+      "id": "20211126-170752_1040515770",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6002",
+      "dateFinished": "2021-11-26T17:15:04+0000",
+      "dateStarted": "2021-11-26T17:15:03+0000"
+    },
+    {
+      "text": "%md\n## Загрузим данные https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:14:55+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Загрузим данные <a href=\"https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews\">https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews</a></h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_700945176",
+      "id": "20211126-170752_1779852178",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6003",
+      "dateFinished": "2021-11-26T17:14:55+0000",
+      "dateStarted": "2021-11-26T17:14:55+0000"
+    },
+    {
+      "text": "val df = spark.read\n            .option(\"header\", \"true\")\n            .option(\"inferSchema\", \"true\")\n            .csv(\"data/tripadvisor_hotel_reviews.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:18:16+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Review: string, Rating: int]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=7",
+              "$$hashKey": "object:9006"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=8",
+              "$$hashKey": "object:9007"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_1059021346",
+      "id": "20211126-170752_217883936",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6004",
+      "dateFinished": "2021-11-26T17:18:17+0000",
+      "dateStarted": "2021-11-26T17:18:16+0000"
+    },
+    {
+      "text": "df.show(20, 75)",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:18:40+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------------------------------------------------------------------------+------+\n|                                                                     Review|Rating|\n+---------------------------------------------------------------------------+------+\n|nice hotel expensive parking got good deal stay hotel anniversary, arriv...|     4|\n|ok nothing special charge diamond member hilton decided chain shot 20th ...|     2|\n|nice rooms not 4* experience hotel monaco seattle good hotel n't 4* leve...|     3|\n|unique, great stay, wonderful time hotel monaco, location excellent shor...|     5|\n|great stay great stay, went seahawk game awesome, downfall view building...|     5|\n|love monaco staff husband stayed hotel crazy weekend attending memorial ...|     5|\n|cozy stay rainy city, husband spent 7 nights monaco early january 2008. ...|     5|\n|excellent staff, housekeeping quality hotel chocked staff make feel home...|     4|\n|hotel stayed hotel monaco cruise, rooms generous decorated uniquely, hot...|     5|\n|excellent stayed hotel monaco past w/e delight, reception staff friendly...|     5|\n|poor value stayed monaco seattle july, nice hotel priced 100- 150 night ...|     2|\n|nice value seattle stayed 4 nights late 2007. looked comparable hilton m...|     4|\n|nice hotel good location hotel kimpton design whimsical vibe fun, staff ...|     4|\n|nice hotel not nice staff hotel lovely staff quite rude, bellhop desk cl...|     3|\n|great hotel night quick business trip, loved little touches like goldfis...|     4|\n|horrible customer service hotel stay february 3rd 4th 2007my friend pick...|     1|\n|disappointed say anticipating stay hotel monaco based reviews seen tripa...|     2|\n|fantastic stay monaco seattle hotel monaco holds high standards kimpton ...|     5|\n|good choice hotel recommended sister, great location room nice, comforta...|     5|\n|hmmmmm say really high hopes hotel monaco chose base girlfriend shopping...|     3|\n+---------------------------------------------------------------------------+------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=9",
+              "$$hashKey": "object:9047"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_256029737",
+      "id": "20211126-170752_1236297322",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6005",
+      "dateFinished": "2021-11-26T17:18:41+0000",
+      "dateStarted": "2021-11-26T17:18:40+0000"
+    },
+    {
+      "text": "%md\n1. Привести все к одному регистру\n2. Удалить все спецсимволы",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:19:10+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol>\n<li>Привести все к одному регистру</li>\n<li>Удалить все спецсимволы</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_387861764",
+      "id": "20211126-170752_1605807412",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6006",
+      "dateFinished": "2021-11-26T17:19:10+0000",
+      "dateStarted": "2021-11-26T17:19:10+0000"
+    },
+    {
+      "text": "val df_stage_2 = df.select(col(\"Rating\"), (lower(regexp_replace(col(\"Review\"), \"[^a-zA-Z\\\\s]\", \"\")).alias(\"text\")))",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:19:20+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdf_stage_2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Rating: int, text: string]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_64809444",
+      "id": "20211126-170752_107306915",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6007",
+      "dateFinished": "2021-11-26T17:19:21+0000",
+      "dateStarted": "2021-11-26T17:19:20+0000"
+    },
+    {
+      "text": "df_stage_2.show(20, 75)",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:19:25+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+---------------------------------------------------------------------------+\n|Rating|                                                                       text|\n+------+---------------------------------------------------------------------------+\n|     4|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     2|ok nothing special charge diamond member hilton decided chain shot th an...|\n|     3|nice rooms not  experience hotel monaco seattle good hotel nt  levelposi...|\n|     5|unique great stay wonderful time hotel monaco location excellent short s...|\n|     5|great stay great stay went seahawk game awesome downfall view building d...|\n|     5|love monaco staff husband stayed hotel crazy weekend attending memorial ...|\n|     5|cozy stay rainy city husband spent  nights monaco early january  busines...|\n|     4|excellent staff housekeeping quality hotel chocked staff make feel home ...|\n|     5|hotel stayed hotel monaco cruise rooms generous decorated uniquely hotel...|\n|     5|excellent stayed hotel monaco past we delight reception staff friendly p...|\n|     2|poor value stayed monaco seattle july nice hotel priced   night not hote...|\n|     4|nice value seattle stayed  nights late  looked comparable hilton marriot...|\n|     4|nice hotel good location hotel kimpton design whimsical vibe fun staff y...|\n|     3|nice hotel not nice staff hotel lovely staff quite rude bellhop desk cle...|\n|     4|great hotel night quick business trip loved little touches like goldfish...|\n|     1|horrible customer service hotel stay february rd th my friend picked hot...|\n|     2|disappointed say anticipating stay hotel monaco based reviews seen tripa...|\n|     5|fantastic stay monaco seattle hotel monaco holds high standards kimpton ...|\n|     5|good choice hotel recommended sister great location room nice comfortabl...|\n|     3|hmmmmm say really high hopes hotel monaco chose base girlfriend shopping...|\n+------+---------------------------------------------------------------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=10",
+              "$$hashKey": "object:9151"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_1443599818",
+      "id": "20211126-170752_1868120042",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6008",
+      "dateFinished": "2021-11-26T17:19:25+0000",
+      "dateStarted": "2021-11-26T17:19:25+0000"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637947209347_281861914",
+      "id": "paragraph_1637947209347_281861914",
+      "dateCreated": "2021-11-26T17:20:09+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:9180",
+      "text": "%md\n3. Посчитать частоту слова в предложении",
+      "dateUpdated": "2021-11-26T17:20:16+0000",
+      "dateFinished": "2021-11-26T17:20:16+0000",
+      "dateStarted": "2021-11-26T17:20:16+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"3\">\n<li>Посчитать частоту слова в предложении</li>\n</ol>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "\n// val df_stage_2_ = df_stage_2.select(split(col(\"text\"), \" \"))\n//     .as[Array[String]]\nval df_stage_2_ = df_stage_2\n    .withColumn(\"doc_id\", monotonically_increasing_id())\n    .withColumn(\"token\", explode(split(col(\"text\"), \" \")))\n    .select(\"doc_id\", \"token\", \"text\")\n    .filter(\"token != ''\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:22:16+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdf_stage_2_\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [doc_id: bigint, token: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_2026206217",
+      "id": "20211126-170752_621840221",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6009",
+      "dateFinished": "2021-11-26T17:22:16+0000",
+      "dateStarted": "2021-11-26T17:22:16+0000"
+    },
+    {
+      "text": "df_stage_2_.show(20, 75)",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:22:21+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+-----------+---------------------------------------------------------------------------+\n|doc_id|      token|                                                                       text|\n+------+-----------+---------------------------------------------------------------------------+\n|     0|       nice|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|      hotel|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|  expensive|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|    parking|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|        got|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|       good|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|       deal|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|       stay|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|      hotel|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|anniversary|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|    arrived|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|       late|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|    evening|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|       took|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|     advice|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|   previous|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|    reviews|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|        did|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|      valet|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n|     0|    parking|nice hotel expensive parking got good deal stay hotel anniversary arrive...|\n+------+-----------+---------------------------------------------------------------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=11",
+              "$$hashKey": "object:9404"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_1655591412",
+      "id": "20211126-170752_1327841734",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6010",
+      "dateFinished": "2021-11-26T17:22:21+0000",
+      "dateStarted": "2021-11-26T17:22:21+0000"
+    },
+    {
+      "text": "val tf = df_stage_2_.groupBy(\"doc_id\", \"token\").agg(count(\"text\") as \"tf\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:22:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mtf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [doc_id: bigint, token: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_1111731780",
+      "id": "20211126-170752_1158758945",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6012",
+      "dateFinished": "2021-11-26T17:22:43+0000",
+      "dateStarted": "2021-11-26T17:22:43+0000"
+    },
+    {
+      "text": "tf.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:22:50+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+----------+---+\n|doc_id|     token| tf|\n+------+----------+---+\n|     0|      room|  3|\n|     1|    better|  2|\n|     6|attractive|  1|\n|     6|  positive|  1|\n|     7| concierge|  2|\n|    10|        nt|  2|\n|    12|     clean|  1|\n|    12|   concert|  1|\n|    15|      stay|  2|\n|    16|      desk|  6|\n|    19|       bed|  1|\n|    30| excellent|  1|\n|    32|    really|  1|\n|    44| cringeshe|  1|\n|    46|      mind|  1|\n|    51|    pretty|  1|\n|    52|     steer|  1|\n|    54|     tacky|  1|\n|    58|   staying|  1|\n|    63|       etc|  1|\n+------+----------+---+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=12",
+              "$$hashKey": "object:9485"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472750_205497743",
+      "id": "20211126-170752_1679429553",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6013",
+      "dateFinished": "2021-11-26T17:22:52+0000",
+      "dateStarted": "2021-11-26T17:22:50+0000"
+    },
+    {
+      "text": "%md\n4. Посчитать количество документов со словом",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:23:18+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"4\">\n<li>Посчитать количество документов со словом</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_153725444",
+      "id": "20211126-170752_22305157",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6014",
+      "dateFinished": "2021-11-26T17:23:18+0000",
+      "dateStarted": "2021-11-26T17:23:18+0000"
+    },
+    {
+      "text": "val df = df_stage_2_.groupBy(\"token\").agg(countDistinct(\"doc_id\") as \"df\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:23:30+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [token: string, df: bigint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_1849456217",
+      "id": "20211126-170752_1855214030",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6015",
+      "dateFinished": "2021-11-26T17:23:30+0000",
+      "dateStarted": "2021-11-26T17:23:30+0000"
+    },
+    {
+      "text": "df.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:23:34+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+----+\n|      token|  df|\n+-----------+----+\n|     travel|1330|\n|   priority|  75|\n|        art| 312|\n|       hope| 541|\n|      pools| 819|\n| strawberry|  27|\n| lifeguards|  19|\n|        fog|  16|\n|     waters|  97|\n|   fivestar|  35|\n|     harder|  52|\n|    barrier| 164|\n|   everyday| 514|\n|    familia|  62|\n|   cabinish|   1|\n|     online| 360|\n|  standards| 578|\n|  traveling| 436|\n|  connected| 154|\n|transaction|  13|\n+-----------+----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=13",
+              "$$hashKey": "object:9575"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_311029714",
+      "id": "20211126-170752_559617655",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6016",
+      "dateFinished": "2021-11-26T17:23:37+0000",
+      "dateStarted": "2021-11-26T17:23:34+0000"
+    },
+    {
+      "text": "%md\n5. Взять только 100 самых встречаемых",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:23:42+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"5\">\n<li>Взять только 100 самых встречаемых</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_819753562",
+      "id": "20211126-170752_361292394",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6017",
+      "dateFinished": "2021-11-26T17:23:42+0000",
+      "dateStarted": "2021-11-26T17:23:42+0000"
+    },
+    {
+      "text": "val top_tf = tf.select(\"doc_id\", \"token\", \"tf\").orderBy(col(\"tf\").desc).limit(100)\ntop_tf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:23:47+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+-----+---+\n|     doc_id|token| tf|\n+-----------+-----+---+\n|25769803883|   nt| 52|\n|25769803883|  did| 36|\n|25769806217|hotel| 34|\n|25769806595|hotel| 33|\n|25769804737| food| 32|\n|       2980|   nt| 31|\n|25769804699|   nt| 30|\n|25769804798|  not| 29|\n|25769806217|  not| 29|\n|17179870337|   nt| 29|\n|17179871450|  yes| 27|\n| 8589935756|  did| 27|\n| 8589935563|  not| 27|\n|25769805049|   nt| 27|\n|17179874546|   nt| 27|\n|25769805023|  not| 27|\n|17179871450| just| 27|\n|25769806217|  did| 26|\n| 8589936007| room| 26|\n| 8589936007|   nt| 26|\n+-----------+-----+---+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mtop_tf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [doc_id: bigint, token: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=14",
+              "$$hashKey": "object:9637"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_1102004958",
+      "id": "20211126-170752_917702959",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6018",
+      "dateFinished": "2021-11-26T17:23:49+0000",
+      "dateStarted": "2021-11-26T17:23:47+0000"
+    },
+    {
+      "text": "val top_df = df.select(\"token\", \"df\").orderBy(col(\"df\").desc).limit(100)\ntop_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:23:55+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+-----+\n|    token|   df|\n+---------+-----+\n|    hotel|16325|\n|     room|14056|\n|      not|12124|\n|    staff|11528|\n|    great|11021|\n|     stay|10096|\n|     good| 9280|\n|   stayed| 8552|\n|       nt| 8383|\n|    rooms| 8341|\n| location| 8172|\n|     just| 7736|\n|    clean| 7651|\n|     nice| 7420|\n|      did| 7207|\n|breakfast| 7113|\n|       no| 6818|\n|    night| 6479|\n|  service| 6232|\n|     time| 6155|\n+---------+-----+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mtop_df\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [token: string, df: bigint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=15",
+              "$$hashKey": "object:9675"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_2039517188",
+      "id": "20211126-170752_2053448726",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6019",
+      "dateFinished": "2021-11-26T17:23:59+0000",
+      "dateStarted": "2021-11-26T17:23:55+0000"
+    },
+    {
+      "text": "%md\n6. Сджойнить две полученные таблички и посчитать Tf-Idf (только для слов из предыдущего пункта)",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:24:04+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"6\">\n<li>Сджойнить две полученные таблички и посчитать Tf-Idf (только для слов из предыдущего пункта)</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_1319728726",
+      "id": "20211126-170752_66350467",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6020",
+      "dateFinished": "2021-11-26T17:24:04+0000",
+      "dateStarted": "2021-11-26T17:24:04+0000"
+    },
+    {
+      "text": "val D = tf.groupBy().agg(countDistinct(\"doc_id\") as \"val\").select(\"val\").as[String].collect()(0).toInt;\nval tf_idf = top_tf\n    .join(top_df, \"token\")\n    .withColumn(\"idf\", log((col(\"df\") + 1) / (D + 1)) * (-1))\n    .withColumn(\"tf_idf\", col(\"tf\") * col(\"idf\"));\ntf_idf.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:24:09+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+-----------+---+-----+-------------------+------------------+\n|token|     doc_id| tf|   df|                idf|            tf_idf|\n+-----+-----------+---+-----+-------------------+------------------+\n|   nt|25769803883| 52| 8383| 0.8937094384982694| 46.47289080191001|\n|  did|25769803883| 36| 7207|  1.044843045770919| 37.61434964775309|\n|hotel|25769806217| 34|16325|0.22727563704779163| 7.727371659624915|\n|hotel|25769806595| 33|16325|0.22727563704779163| 7.500096022577124|\n| food|25769804737| 32| 5476| 1.3194770602753716| 42.22326592881189|\n|   nt|       2980| 31| 8383| 0.8937094384982694|27.704992593446352|\n|   nt|25769804699| 30| 8383| 0.8937094384982694|26.811283154948082|\n|  not|25769804798| 29|12124| 0.5247651292534089|15.218188748348858|\n|  not|25769806217| 29|12124| 0.5247651292534089|15.218188748348858|\n|   nt|17179870337| 29| 8383| 0.8937094384982694|25.917573716449812|\n|  did| 8589935756| 27| 7207|  1.044843045770919|28.210762235814812|\n|  not| 8589935563| 27|12124| 0.5247651292534089| 14.16865848984204|\n|   nt|25769805049| 27| 8383| 0.8937094384982694|24.130154839453276|\n|   nt|17179874546| 27| 8383| 0.8937094384982694|24.130154839453276|\n|  not|25769805023| 27|12124| 0.5247651292534089| 14.16865848984204|\n| just|17179871450| 27| 7736| 0.9740205505096384|26.298554863760238|\n|  did|25769806217| 26| 7207|  1.044843045770919|27.165919190043894|\n| room| 8589936007| 26|14056|0.37691407372732705| 9.799765916910504|\n|   nt| 8589936007| 26| 8383| 0.8937094384982694|23.236445400955006|\n| room|       1797| 26|14056|0.37691407372732705| 9.799765916910504|\n+-----+-----------+---+-----+-------------------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mD\u001b[0m: \u001b[1m\u001b[32mInt\u001b[0m = 20491\n\u001b[1m\u001b[34mtf_idf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [token: string, doc_id: bigint ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=16",
+              "$$hashKey": "object:9770"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=17",
+              "$$hashKey": "object:9771"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=18",
+              "$$hashKey": "object:9772"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_535371410",
+      "id": "20211126-170752_1362969637",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6021",
+      "dateFinished": "2021-11-26T17:24:18+0000",
+      "dateStarted": "2021-11-26T17:24:09+0000"
+    },
+    {
+      "text": "%md\n7. Запайвотить табличку",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:24:26+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "colWidth": 12,
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"7\">\n<li>Запайвотить табличку</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_1556149002",
+      "id": "20211126-170752_2146026844",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6022",
+      "dateFinished": "2021-11-26T17:24:26+0000",
+      "dateStarted": "2021-11-26T17:24:26+0000"
+    },
+    {
+      "text": "tf_idf.groupBy().agg(countDistinct(\"doc_id\")).show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:24:31+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------------+\n|count(DISTINCT doc_id)|\n+----------------------+\n|                    60|\n+----------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=19",
+              "$$hashKey": "object:9856"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=20",
+              "$$hashKey": "object:9857"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_706372386",
+      "id": "20211126-170752_754916131",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6023",
+      "dateFinished": "2021-11-26T17:24:35+0000",
+      "dateStarted": "2021-11-26T17:24:31+0000"
+    },
+    {
+      "text": "tf_idf.groupBy().agg(countDistinct(\"token\")).show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:24:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------------------+\n|count(DISTINCT token)|\n+---------------------+\n|                   16|\n+---------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=21",
+              "$$hashKey": "object:9913"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=22",
+              "$$hashKey": "object:9914"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_1390350664",
+      "id": "20211126-170752_214430538",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6024",
+      "dateFinished": "2021-11-26T17:24:47+0000",
+      "dateStarted": "2021-11-26T17:24:43+0000"
+    },
+    {
+      "text": "val result = tf_idf\n    .groupBy(\"doc_id\")\n    .pivot(col(\"token\"))\n    .agg(avg(\"tf_idf\"))\n\nresult.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-26T17:24:53+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 12,
+        "editorHide": false,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+-----------------+------------------+------------------+------------------+-----------------+------------------+------------------+------------------+-----------------+------------------+-----------------+------+-----------------+-----+------------------+-----------------+\n|     doc_id|            beach|               did|              food|             great|            hotel|              just|               not|                nt|           people|              pool|           really|resort|             room|rooms|           service|             went|\n+-----------+-----------------+------------------+------------------+------------------+-----------------+------------------+------------------+------------------+-----------------+------------------+-----------------+------+-----------------+-----+------------------+-----------------+\n|25769803883|             null| 37.61434964775309|              null|13.022967102934158|             null|              null|11.020067714321588| 46.47289080191001| 28.8447086755172|              null|34.41768023588394|  null|             null| null|              null|             null|\n|25769806217|             null|27.165919190043894|              null|              null|7.727371659624915|              null|15.218188748348858|              null|             null|              null|             null|  null|8.669023695728523| null|              null|             null|\n|25769806595|             null|              null|              null|              null|7.500096022577124|              null| 9.445772326561361|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|25769804737|             null|              null| 42.22326592881189|              null|             null|              null|              null|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|       2980|             null| 20.89686091541838|              null|              null|             null|              null|              null|27.704992593446352|             null|              null|             null|  null|             null| null|              null|             null|\n|25769804699|             null|              null|              null|              null|             null|              null|              null|26.811283154948082|             null|              null|             null|  null|             null| null|              null|             null|\n|25769804798|             null|              null|              null|              null|             null|              null|15.218188748348858|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|17179870337|             null|18.807174823876544|              null|              null|             null|              null|  9.97053745581477|25.917573716449812|             null|              null|             null|  null|             null| null|              null|             null|\n| 8589935756|33.15553565570613|28.210762235814812|              null|              null|             null|              null|11.544832843574996|20.555317085460196|             null|              null|             null|  null|             null| null|              null|             null|\n| 8589935563|             null|              null|              null|              null|             null|              null| 14.16865848984204|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|25769805049|             null| 20.89686091541838|              null|              null|             null|              null|              null|24.130154839453276|             null|              null|             null|  null|             null| null|              null|             null|\n|17179874546|             null|              null|              null|              null|             null|              null|              null|24.130154839453276|             null|              null|             null|  null|             null| null|              null|             null|\n|25769805023|             null|              null|              null|              null|             null|              null| 14.16865848984204|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|17179871450|             null|              null|              null|              null|             null|26.298554863760238|              null|              null|             null|31.050566269976205|             null|  null|             null| null|21.423182548504364|33.53676064712767|\n| 8589936007|             null|              null|29.028495326058174|              null|             null|              null| 9.445772326561361|23.236445400955006|35.25464393674324|              null|             null|  null|9.799765916910504| null|              null|             null|\n|       1797|             null|              null|              null|              null|             null|              null|              null|              null|             null|              null|             null|  null|9.799765916910504| null|              null|             null|\n|17179872099|             null|              null|              null|              null|             null|              null|12.594363102081815|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|17179873215|             null|              null|              null|              null|             null|              null|12.594363102081815|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|17179871176|             null|              null|              null|              null|             null|              null|12.069597972828404|              null|             null|              null|             null|  null|             null| null|              null|             null|\n|       2421|             null|              null|              null|              null|4.772788378003624|              null|12.069597972828404|              null|             null|              null|             null|  null|             null| null|              null|             null|\n+-----------+-----------------+------------------+------------------+------------------+-----------------+------------------+------------------+------------------+-----------------+------------------+-----------------+------+-----------------+-----+------------------+-----------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mresult\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [doc_id: bigint, beach: double ... 15 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=23",
+              "$$hashKey": "object:10082"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=24",
+              "$$hashKey": "object:10083"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=25",
+              "$$hashKey": "object:10084"
+            },
+            {
+              "jobUrl": "http://555c2762b1f6:4040/jobs/job?id=26",
+              "$$hashKey": "object:10085"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1637946472751_834029572",
+      "id": "20211126-170752_929075867",
+      "dateCreated": "2021-11-26T17:07:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6025",
+      "dateFinished": "2021-11-26T17:25:02+0000",
+      "dateStarted": "2021-11-26T17:24:53+0000"
+    }
+  ],
+  "name": "HW6",
+  "id": "2GN5R3D18",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/HW6"
+}
